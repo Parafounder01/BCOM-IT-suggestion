@@ -134,7 +134,7 @@ Dark canvas band with centered "Ready to Begin?" headline in 36px display type, 
 
 ## Technical Notes
 
-- **Single file.** All HTML, CSS, and JavaScript are inlined in `bcom-it-career-guide-2026.html`.
+- **Single file.** All HTML, CSS, and JavaScript are inlined in `index.html`.
 - **No external dependencies** except Google Fonts (Inter) and a placeholder image service.
 - **Zero JavaScript libraries** — vanilla JS for hamburger toggle and smooth scrolling.
 - **CSS custom properties** for every design token — color, spacing, typography, and layout values are centralized in `:root`.
