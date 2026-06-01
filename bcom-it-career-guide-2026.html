@@ -1,0 +1,1590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B.Com (IT) 2026 — Career Landscape & Opportunities</title>
+    <meta
+      name="description"
+      content="A comprehensive guide to jobs, salaries, government exams, and emerging sectors for Bachelor of Commerce in Information Technology graduates in India."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============================================================
+   FERRARI DESIGN SYSTEM — Tokens & Reset
+   ============================================================ */
+      :root {
+        --canvas: #181818;
+        --canvas-elevated: #303030;
+        --canvas-light: #ffffff;
+        --ink: #ffffff;
+        --body: #969696;
+        --body-light: #181818;
+        --muted: #666666;
+        --hairline: #303030;
+        --hairline-light: #d2d2d2;
+        --rosso: #da291c;
+        --rosso-active: #b01e0a;
+        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+        /* 8px spacing ladder */
+        --xxxs: 4px;
+        --xxs: 8px;
+        --xs: 16px;
+        --sm: 24px;
+        --md: 32px;
+        --lg: 48px;
+        --xl: 64px;
+        --xxl: 96px;
+        --super: 128px;
+
+        --max-width: 1280px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--body);
+        background: var(--canvas);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--sm);
+      }
+
+      /* ============================================================
+   TOP NAV — on dark
+   ============================================================ */
+      .top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(24, 24, 24, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--hairline);
+      }
+      .top-nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+      }
+      .nav-logo {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+        color: var(--ink);
+        user-select: none;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: var(--sm);
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+        color: var(--body);
+        transition: color 0.2s;
+        padding: var(--xxs) 0;
+        white-space: nowrap;
+      }
+      .nav-links a:hover {
+        color: var(--ink);
+      }
+
+      /* Hamburger */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--xxs);
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--ink);
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 64px;
+          left: 0;
+          width: 100%;
+          flex-direction: column;
+          background: rgba(24, 24, 24, 0.98);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          padding: var(--xs) var(--sm) var(--sm);
+          border-bottom: 1px solid var(--hairline);
+          gap: var(--xxs);
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        .nav-links a {
+          display: block;
+          padding: var(--xxs) 0;
+          font-size: 12px;
+        }
+      }
+
+      /* ============================================================
+   HERO — Cinema Band
+   ============================================================ */
+      .hero-band-cinema {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--super) var(--sm) var(--xxl);
+        overflow: hidden;
+        background: var(--canvas);
+      }
+      .hero-band-cinema::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(135deg, rgba(218, 41, 28, 0.08) 0%, transparent 40%),
+          linear-gradient(225deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+          linear-gradient(180deg, transparent 60%, rgba(24, 24, 24, 0.9) 100%),
+          radial-gradient(ellipse at 80% 20%, rgba(218, 41, 28, 0.06) 0%, transparent 60%);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .hero-band-cinema::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(0deg, var(--hairline) 1px, transparent 1px),
+          linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+        background-size: 60px 60px;
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+      }
+      .hero-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        margin-bottom: var(--sm);
+        display: block;
+      }
+      .hero-content h1 {
+        font-size: 80px;
+        font-weight: 500;
+        letter-spacing: -1.6px;
+        color: var(--ink);
+        line-height: 1.05;
+        margin-bottom: var(--xs);
+      }
+      .hero-sub {
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--body);
+        letter-spacing: -0.36px;
+        margin-bottom: var(--sm);
+        line-height: 1.2;
+      }
+      .hero-desc {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.5;
+        max-width: 640px;
+        margin: 0 auto var(--lg);
+      }
+      .hero-actions {
+        display: flex;
+        gap: var(--xs);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* ============================================================
+   BUTTONS
+   ============================================================ */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 var(--md);
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s;
+        border-radius: 0;
+        text-decoration: none;
+      }
+      .btn-primary {
+        background: var(--rosso);
+        color: var(--ink);
+      }
+      .btn-primary:hover {
+        background: var(--rosso-active);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--ink);
+      }
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ============================================================
+   SECTION — Shared Styles
+   ============================================================ */
+      .section-dark {
+        padding: var(--xxl) 0;
+        background: var(--canvas);
+      }
+      .section-dark-alt {
+        padding: var(--xxl) 0;
+        background: var(--canvas-elevated);
+      }
+      .section-light {
+        padding: var(--xxl) 0;
+        background: var(--canvas-light);
+      }
+
+      .section-title {
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.36px;
+        color: var(--ink);
+        margin-bottom: var(--xxs);
+      }
+      .section-subtitle {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: var(--lg);
+        max-width: 600px;
+      }
+      .section-title-light {
+        color: var(--body-light);
+      }
+      .section-subtitle-light {
+        color: var(--muted);
+      }
+
+      /* ============================================================
+   LIVERY BAND — Rosso Corsa accented divider
+   ============================================================ */
+      .livery-band {
+        background: var(--rosso);
+        padding: var(--xl) 0;
+        text-align: center;
+        width: 100%;
+      }
+      .livery-band .container {
+        max-width: 800px;
+      }
+      .livery-stat {
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: -1.6px;
+        color: var(--ink);
+        line-height: 1;
+        margin-bottom: var(--xs);
+      }
+      .livery-text {
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--ink);
+        line-height: 1.3;
+        margin-bottom: var(--xxs);
+      }
+      .livery-caption {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* ============================================================
+   TABLE — Hairline styled
+   ============================================================ */
+      .table-wrap {
+        overflow-x: auto;
+      }
+      .table-hairline {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      .table-hairline thead th {
+        text-align: left;
+        padding: var(--xs) var(--xxs);
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--muted);
+        border-bottom: 1px solid var(--hairline);
+        white-space: nowrap;
+      }
+      .table-hairline tbody td {
+        padding: var(--xs) var(--xxs);
+        color: var(--body);
+        border-bottom: 1px solid var(--hairline);
+        vertical-align: top;
+      }
+      .table-hairline tbody tr:last-child td {
+        border-bottom: none;
+      }
+      .table-hairline .highlight-number {
+        color: var(--rosso);
+        font-weight: 700;
+      }
+
+      /* Light background tables */
+      .section-light .table-hairline thead th {
+        color: var(--muted);
+        border-bottom-color: var(--hairline-light);
+      }
+      .section-light .table-hairline tbody td {
+        color: var(--body-light);
+        border-bottom-color: var(--hairline-light);
+      }
+
+      /* Tags within tables */
+      .label-tag {
+        display: inline-block;
+        padding: 2px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        border-radius: 9999px;
+      }
+      .tag-released {
+        background: rgba(218, 41, 28, 0.15);
+        color: var(--rosso);
+      }
+      .tag-expected {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--body);
+      }
+      .tag-critical {
+        background: rgba(218, 41, 28, 0.12);
+        color: var(--rosso);
+      }
+
+      /* ============================================================
+   CARDS — Sharp, no radius
+   ============================================================ */
+      .card-grid {
+        display: grid;
+        gap: 1px;
+        background: var(--hairline);
+      }
+      .card-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card-grid-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        background: var(--canvas);
+        padding: var(--md);
+      }
+      .card-elevated {
+        background: var(--canvas-elevated);
+      }
+
+      .card-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        margin-bottom: var(--xxs);
+      }
+      .card-title {
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: var(--xxs);
+        line-height: 1.2;
+      }
+      .card-body {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.5;
+      }
+      .card-body strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .card-salary {
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: -1.6px;
+        color: var(--rosso);
+        line-height: 1;
+        margin: var(--xs) 0 var(--xxs);
+      }
+      .card-company-list {
+        list-style: none;
+        margin-top: var(--xxs);
+      }
+      .card-company-list li {
+        font-size: 13px;
+        color: var(--body);
+        margin-bottom: 4px;
+      }
+      .card-company-list li strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* ============================================================
+   SKILLS — Display Cards with spec numbers
+   ============================================================ */
+      .skill-grid {
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(5, 1fr);
+        background: var(--hairline);
+      }
+      .skill-card {
+        background: var(--canvas);
+        padding: var(--md);
+        text-align: center;
+      }
+      .skill-card .skill-value {
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: -1.6px;
+        color: var(--rosso);
+        line-height: 1;
+        margin-bottom: var(--xxs);
+      }
+      .skill-card .skill-value-md {
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: -1.6px;
+        color: var(--rosso);
+        line-height: 1;
+        margin-bottom: var(--xxs);
+      }
+      .skill-card .skill-value-sm {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+        color: var(--rosso);
+        line-height: 1;
+        margin-bottom: var(--xxs);
+      }
+      .skill-name {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: var(--xxs);
+      }
+      .skill-level {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        margin-bottom: var(--xxxs);
+      }
+      .level-critical {
+        color: var(--rosso);
+      }
+      .level-required {
+        color: var(--ink);
+      }
+      .level-high {
+        color: var(--body);
+      }
+      .level-emerging {
+        color: var(--muted);
+      }
+
+      /* ============================================================
+   ROADMAP — Timeline
+   ============================================================ */
+      .timeline {
+        position: relative;
+        padding-left: var(--md);
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--hairline);
+      }
+      .timeline-item {
+        position: relative;
+        padding-bottom: var(--md);
+      }
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: calc(-1 * var(--md) + 1px);
+        top: 6px;
+        transform: translateX(-50%);
+        width: 8px;
+        height: 8px;
+        background: var(--rosso);
+        border-radius: 0;
+      }
+      .timeline-period {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        margin-bottom: var(--xxs);
+      }
+      .timeline-title {
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: var(--xxs);
+      }
+      .timeline-detail {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.5;
+      }
+      .timeline-detail strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .timeline-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--xxxs);
+        margin-top: var(--xxs);
+      }
+      .timeline-tag {
+        display: inline-block;
+        padding: 2px 10px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        border: 1px solid var(--hairline);
+        color: var(--body);
+        border-radius: 0;
+      }
+
+      /* ============================================================
+   CERTIFICATIONS — Mixed card/table
+   ============================================================ */
+      .cert-grid {
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(5, 1fr);
+        background: var(--hairline);
+      }
+      .cert-card {
+        background: var(--canvas);
+        padding: var(--md);
+      }
+      .cert-card .cert-name {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: var(--xxxs);
+      }
+      .cert-card .cert-cost {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--muted);
+        margin-bottom: var(--xxxs);
+      }
+      .cert-card .cert-duration {
+        font-size: 12px;
+        color: var(--body);
+        margin-bottom: var(--xxs);
+      }
+      .cert-card .cert-demand {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+      }
+
+      /* ============================================================
+   CTA BAND — Pre-footer
+   ============================================================ */
+      .cta-band-dark {
+        padding: var(--xxl) 0;
+        background: var(--canvas);
+        text-align: center;
+        border-top: 1px solid var(--hairline);
+        border-bottom: 1px solid var(--hairline);
+      }
+      .cta-band-dark h2 {
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.36px;
+        color: var(--ink);
+        margin-bottom: var(--xs);
+      }
+      .cta-band-dark p {
+        font-size: 14px;
+        color: var(--body);
+        max-width: 520px;
+        margin: 0 auto var(--md);
+      }
+
+      /* ============================================================
+   FOOTER — Dark canvas
+   ============================================================ */
+      .footer-dark {
+        padding: var(--xl) 0 var(--md);
+        background: var(--canvas);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: var(--md);
+        padding-bottom: var(--lg);
+        border-bottom: 1px solid var(--hairline);
+        margin-bottom: var(--md);
+      }
+      .footer-brand {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+        color: var(--ink);
+        margin-bottom: var(--xxxs);
+      }
+      .footer-desc {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+        max-width: 280px;
+      }
+      .footer-col-title {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--ink);
+        margin-bottom: var(--xs);
+      }
+      .footer-links {
+        list-style: none;
+      }
+      .footer-links li {
+        margin-bottom: var(--xxs);
+      }
+      .footer-links a {
+        font-size: 13px;
+        color: var(--body);
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--ink);
+      }
+      .footer-bottom {
+        text-align: center;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+      /* Mobile < 640px */
+      @media (max-width: 639px) {
+        .hero-content h1 {
+          font-size: 32px;
+        }
+        .hero-sub {
+          font-size: 20px;
+        }
+        .section-title {
+          font-size: 28px;
+        }
+        .card-grid-3,
+        .card-grid-4,
+        .skill-grid,
+        .cert-grid {
+          grid-template-columns: 1fr;
+        }
+        .card-grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: var(--sm);
+        }
+        .livery-stat {
+          font-size: 48px;
+        }
+        .livery-text {
+          font-size: 20px;
+        }
+        .card-salary {
+          font-size: 48px;
+        }
+        .skill-card .skill-value {
+          font-size: 48px;
+        }
+        .skill-card .skill-value-md {
+          font-size: 36px;
+        }
+        .hero-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+        .section-dark,
+        .section-dark-alt,
+        .section-light {
+          padding: var(--xl) 0;
+        }
+        .hero-band-cinema {
+          padding: 160px var(--sm) var(--xl);
+          min-height: 90vh;
+        }
+        .table-hairline {
+          font-size: 12px;
+        }
+        .timeline-title {
+          font-size: 20px;
+        }
+      }
+
+      /* Tablet 640-1024px */
+      @media (min-width: 640px) and (max-width: 1024px) {
+        .hero-content h1 {
+          font-size: 56px;
+        }
+        .hero-sub {
+          font-size: 26px;
+        }
+        .card-grid-3,
+        .card-grid-4 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .skill-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .cert-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .livery-stat {
+          font-size: 64px;
+        }
+      }
+
+      /* Desktop 1024+ */
+      @media (min-width: 1024px) {
+        .card-grid-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .card-grid-4 {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .skill-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        .cert-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="top-nav" id="nav">
+      <div class="container">
+        <div class="nav-logo">B.Com (IT) 2026</div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#placements">Placements</a></li>
+          <li><a href="#salary">Salary</a></li>
+          <li><a href="#exams">Exams</a></li>
+          <li><a href="#sectors">Sectors</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO — Cinema Band ===== -->
+    <section class="hero-band-cinema" id="hero">
+      <div class="hero-content">
+        <span class="hero-label">Career Report 2026</span>
+        <h1>B.Com (IT) 2026</h1>
+        <p class="hero-sub">Career Landscape &amp; Opportunities</p>
+        <p class="hero-desc">
+          A comprehensive guide to jobs, salaries, government exams, and emerging sectors for
+          Bachelor of Commerce in Information Technology graduates in India.
+        </p>
+        <div class="hero-actions">
+          <a href="#placements" class="btn btn-primary">Explore Placements</a>
+          <a href="#salary" class="btn btn-outline">Salary Breakdown</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1 — Active Campus Placements ===== -->
+    <section class="section-dark" id="placements">
+      <div class="container">
+        <h2 class="section-title">Active Campus Placements</h2>
+        <p class="section-subtitle">
+          Major recruiters for B.Com (IT) graduates in the 2025–2026 cycle across IT services,
+          premium tracks, and the Big 4.
+        </p>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          Core IT Services — Mass Recruitment
+        </h3>
+        <div class="table-wrap" style="margin-bottom: var(--lg)">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Role / Track</th>
+                <th>Salary (LPA)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TCS</td>
+                <td>BPS — NQT</td>
+                <td class="highlight-number">₹3.36 — 4 LPA</td>
+              </tr>
+              <tr>
+                <td>Infosys</td>
+                <td>BPM</td>
+                <td class="highlight-number">₹3.6 — 4.5 LPA</td>
+              </tr>
+              <tr>
+                <td>Wipro</td>
+                <td>BPO</td>
+                <td class="highlight-number">₹3 — 4 LPA</td>
+              </tr>
+              <tr>
+                <td>Cognizant</td>
+                <td>GenC</td>
+                <td class="highlight-number">₹2.8 — 4 LPA</td>
+              </tr>
+              <tr>
+                <td>Capgemini</td>
+                <td>Business Services</td>
+                <td class="highlight-number">₹4 — 5 LPA</td>
+              </tr>
+              <tr>
+                <td>HCLTech</td>
+                <td>Non-Tech Graduate Trainee</td>
+                <td class="highlight-number">₹3 — 4.5 LPA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          Premium Tracks
+        </h3>
+        <div class="table-wrap" style="margin-bottom: var(--lg)">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Track</th>
+                <th>Salary (LPA)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TCS</td>
+                <td>Digital</td>
+                <td class="highlight-number">₹7 — 9 LPA</td>
+              </tr>
+              <tr>
+                <td>Infosys</td>
+                <td>Specialist Programme (SP)</td>
+                <td class="highlight-number">₹6.5 — 9 LPA</td>
+              </tr>
+              <tr>
+                <td>Wipro</td>
+                <td>Turbo</td>
+                <td class="highlight-number">₹6.5 — 8 LPA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          Big 4
+        </h3>
+        <div class="table-wrap">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Firm</th>
+                <th>Salary Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deloitte</td>
+                <td class="highlight-number">₹3.5 — 5 LPA</td>
+              </tr>
+              <tr>
+                <td>EY</td>
+                <td class="highlight-number">₹4 — 6 LPA</td>
+              </tr>
+              <tr>
+                <td>KPMG</td>
+                <td class="highlight-number">Up to ₹4 LPA</td>
+              </tr>
+              <tr>
+                <td>PwC</td>
+                <td class="highlight-number">₹4.5 — 7 LPA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIVERY BAND 1 ===== -->
+    <section class="livery-band">
+      <div class="container">
+        <div class="livery-stat">8×</div>
+        <p class="livery-text">From ₹2.8 LPA to ₹22 LPA — the B.Com IT salary spectrum</p>
+        <p class="livery-caption">
+          The range spans mass recruitment through premium product companies
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2 — Salary by Sector ===== -->
+    <section class="section-dark-alt" id="salary">
+      <div class="container">
+        <h2 class="section-title">Salary by Sector</h2>
+        <p class="section-subtitle">
+          Expected compensation ranges across industries for B.Com (IT) graduates in 2026.
+        </p>
+        <div class="table-wrap">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Sector</th>
+                <th>Annual (LPA)</th>
+                <th>Monthly (approx.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>IT Services — Mass Recruitment</td>
+                <td class="highlight-number">₹2.8 — 4.5 LPA</td>
+                <td>₹21K — 33K / mo</td>
+              </tr>
+              <tr>
+                <td>IT Services — Premium Tracks</td>
+                <td class="highlight-number">₹5.5 — 9 LPA</td>
+                <td>₹38K — 60K / mo</td>
+              </tr>
+              <tr>
+                <td>Big 4 (Audit / Advisory)</td>
+                <td class="highlight-number">₹3.5 — 7 LPA</td>
+                <td>₹25K — 48K / mo</td>
+              </tr>
+              <tr>
+                <td>Banking — PO</td>
+                <td class="highlight-number">₹8 — 10 LPA</td>
+                <td>₹52K — 65K / mo</td>
+              </tr>
+              <tr>
+                <td>Fintech</td>
+                <td class="highlight-number">₹4 — 8 LPA</td>
+                <td>₹28K — 55K / mo</td>
+              </tr>
+              <tr>
+                <td>Analytics</td>
+                <td class="highlight-number">₹4 — 9 LPA</td>
+                <td>₹28K — 60K / mo</td>
+              </tr>
+              <tr>
+                <td>Product Companies</td>
+                <td class="highlight-number">₹7 — 22 LPA</td>
+                <td>₹48K — 1.3L / mo</td>
+              </tr>
+              <tr>
+                <td>E-commerce</td>
+                <td class="highlight-number">₹4 — 7 LPA</td>
+                <td>₹28K — 48K / mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3 — Government Exams 2026 ===== -->
+    <section class="section-dark" id="exams">
+      <div class="container">
+        <h2 class="section-title">Government Exams — 2026</h2>
+        <p class="section-subtitle">
+          Key competitive examinations open to B.Com (IT) graduates with expected timelines and
+          vacancy counts.
+        </p>
+        <div class="table-wrap">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Exam</th>
+                <th>Status</th>
+                <th>Vacancies</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SSC CGL</td>
+                <td><span class="label-tag tag-released">RELEASED</span></td>
+                <td>~12,256</td>
+                <td class="highlight-number">₹25.5K — 1.51L / mo</td>
+              </tr>
+              <tr>
+                <td>RBI Grade B</td>
+                <td><span class="label-tag tag-released">RELEASED</span></td>
+                <td>~60 posts</td>
+                <td class="highlight-number">₹83K — 90K / mo</td>
+              </tr>
+              <tr>
+                <td>SBI PO</td>
+                <td><span class="label-tag tag-expected">Expected May-Jun</span></td>
+                <td>1,500 — 2,500</td>
+                <td class="highlight-number">₹65K — 72K / mo</td>
+              </tr>
+              <tr>
+                <td>IBPS PO</td>
+                <td><span class="label-tag tag-expected">Expected June</span></td>
+                <td>4,000 — 5,200+</td>
+                <td class="highlight-number">₹52K — 57K / mo</td>
+              </tr>
+              <tr>
+                <td>IBPS Clerk</td>
+                <td><span class="label-tag tag-expected">Prelims Oct</span></td>
+                <td>4,000+</td>
+                <td class="highlight-number">₹29K — 33K / mo</td>
+              </tr>
+              <tr>
+                <td>IBPS SO IT</td>
+                <td><span class="label-tag tag-expected">Prelims Aug 29</span></td>
+                <td>Varies</td>
+                <td class="highlight-number">₹52K — 57K / mo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4 — Hot Emerging Sectors ===== -->
+    <section class="section-dark-alt" id="sectors">
+      <div class="container">
+        <h2 class="section-title">Hot Emerging Sectors</h2>
+        <p class="section-subtitle">
+          High-growth domains where B.Com (IT) graduates are in demand, with real employer salary
+          data.
+        </p>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          Data Analytics
+          <span
+            style="
+              font-size: 11px;
+              font-weight: 600;
+              letter-spacing: 1.1px;
+              text-transform: uppercase;
+              color: var(--rosso);
+            "
+            >Hottest</span
+          >
+        </h3>
+        <div class="card-grid card-grid-4" style="margin-bottom: var(--md)">
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">AmEx</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹8 — 18 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Citi</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹19 — 22 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">JPMC</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹6 — 10 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Standard Chartered</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹8 — 15 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">HSBC</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹6 — 9 LPA
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          Fintech
+        </h3>
+        <div class="card-grid card-grid-3" style="margin-bottom: var(--md)">
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Razorpay</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹4 — 7 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Bajaj Finance</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹4 — 6 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">FIS</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹4 — 8 LPA
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 26px; font-weight: 500; color: var(--ink); margin-bottom: var(--xs)">
+          E-commerce
+        </h3>
+        <div class="card-grid card-grid-3">
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Amazon</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹7 — 14 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Flipkart</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹6 — 10 LPA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title" style="font-size: 18px">Goldman Sachs</div>
+            <div
+              class="card-salary"
+              style="font-size: 36px; margin-top: 0; margin-bottom: var(--xxs)"
+            >
+              ₹8 — 15 LPA
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIVERY BAND 2 ===== -->
+    <section class="livery-band">
+      <div class="container">
+        <div class="livery-stat">40%</div>
+        <p class="livery-text">
+          The right certification can boost your starting salary by up to 40%
+        </p>
+        <p class="livery-caption">
+          Targeted credentials open doors to premium tracks and analytics roles
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5 — Certifications ===== -->
+    <section class="section-dark" id="certifications">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">
+          Credentials that matter for B.Com (IT) graduates, ranked by cost, duration, and demand.
+        </p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-name">Microsoft<br />PL-300</div>
+            <div class="cert-cost">~₹14,000</div>
+            <div class="cert-duration">2 — 3 months</div>
+            <div class="cert-demand" style="color: var(--rosso)">Very High</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-name">Google Data Analytics</div>
+            <div class="cert-cost">~₹2,500 / mo</div>
+            <div class="cert-duration">6 months</div>
+            <div class="cert-demand" style="color: var(--body)">High</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-name">SQL<br />(Self-Paced)</div>
+            <div class="cert-cost">Free</div>
+            <div class="cert-duration">1 month</div>
+            <div class="cert-demand" style="color: var(--rosso)">Critical</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-name">CompTIA Security+</div>
+            <div class="cert-cost">~₹31,000</div>
+            <div class="cert-duration">2 — 3 months</div>
+            <div class="cert-demand" style="color: var(--body)">Moderate</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-name">CFI<br />FPAP</div>
+            <div class="cert-cost">~₹42,000</div>
+            <div class="cert-duration">3 — 4 months</div>
+            <div class="cert-demand" style="color: var(--body)">Moderate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6 — Skills That Matter ===== -->
+    <section class="section-dark-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills That Matter</h2>
+        <p class="section-subtitle">
+          Competencies that define employability for B.Com (IT) graduates in 2026.
+        </p>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <div class="skill-value">80<span style="font-size: 32px">%</span></div>
+            <div class="skill-name">SQL</div>
+            <div class="skill-level level-critical">Critical</div>
+            <div style="font-size: 11px; color: var(--muted)">80%+ analytics roles require SQL</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-value-md">Req.</div>
+            <div class="skill-name">Excel Advanced</div>
+            <div class="skill-level level-required">Required</div>
+            <div style="font-size: 11px; color: var(--muted)">Universal baseline skill</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-value-md">High</div>
+            <div class="skill-name">Power BI / Tableau</div>
+            <div class="skill-level level-high">High</div>
+            <div style="font-size: 11px; color: var(--muted)">Visualisation &amp; reporting</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-value-md">High</div>
+            <div class="skill-name">Python</div>
+            <div class="skill-level level-high">High</div>
+            <div style="font-size: 11px; color: var(--muted)">Automation &amp; data analysis</div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-value-sm">Emerging</div>
+            <div class="skill-name">GenAI / Prompt Eng.</div>
+            <div class="skill-level level-emerging">Emerging</div>
+            <div style="font-size: 11px; color: var(--muted)">Rapidly growing demand</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7 — Practical Roadmap 2026 ===== -->
+    <section class="section-dark" id="roadmap">
+      <div class="container">
+        <h2 class="section-title">Practical Roadmap — 2026</h2>
+        <p class="section-subtitle">
+          Month-by-month action plan for B.Com (IT) graduates to maximise offers and exam outcomes.
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-period">Immediate — June &amp; July</div>
+            <div class="timeline-title">Apply for Mass Recruitment &amp; Bank Exams</div>
+            <div class="timeline-detail">
+              <strong>Applications open:</strong> TCS BPS (NQT), Infosys BPM, Cognizant CCAT.
+              Register for IBPS PO and SBI PO before deadlines. Prepare basic quantitative aptitude
+              and reasoning for online tests.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">TCS BPS</span>
+              <span class="timeline-tag">Infosys BPM</span>
+              <span class="timeline-tag">Cognizant CCAT</span>
+              <span class="timeline-tag">IBPS PO</span>
+              <span class="timeline-tag">SBI PO</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-period">Skill Building — June to August</div>
+            <div class="timeline-title">12-Week Technical Upskill Sprint</div>
+            <div class="timeline-detail">
+              <strong>Weeks 1–2:</strong> SQL fundamentals — joins, aggregations, subqueries.<br />
+              <strong>Weeks 3–4:</strong> Advanced Excel — pivot tables, lookups, macros.<br />
+              <strong>Weeks 5–8:</strong> Power BI — data modelling, DAX, dashboards.<br />
+              <strong>Weeks 9–12:</strong> Python — pandas, matplotlib, automation scripts.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">SQL</span>
+              <span class="timeline-tag">Excel</span>
+              <span class="timeline-tag">Power BI</span>
+              <span class="timeline-tag">Python</span>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-period">Ongoing — June to September</div>
+            <div class="timeline-title">Government Exam Preparation</div>
+            <div class="timeline-detail">
+              <strong>SBI PO / IBPS PO:</strong> Dedicate 2 hours daily to reasoning, quantitative
+              aptitude, English, and general awareness. Take weekly mock tests.<br />
+              <strong>SSC CGL Tier-I:</strong> Exam window August–September. Focus on quantitative
+              aptitude, general intelligence, English, and general awareness.
+            </div>
+            <div class="timeline-tags">
+              <span class="timeline-tag">SBI PO Prep</span>
+              <span class="timeline-tag">IBPS PO Prep</span>
+              <span class="timeline-tag">SSC CGL Tier-I</span>
+              <span class="timeline-tag">Mock Tests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND — Pre-Footer ===== -->
+    <section class="cta-band-dark">
+      <div class="container">
+        <h2>Ready to build your career?</h2>
+        <p>
+          Start with SQL this week. Apply for TCS BPS and IBPS PO this month. The 2026 cycle rewards
+          early action.
+        </p>
+        <a href="#hero" class="btn btn-primary">Back to Top</a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-dark">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">B.Com (IT) 2026</div>
+            <p class="footer-desc">
+              A comprehensive career guide for Bachelor of Commerce in Information Technology
+              graduates in India. Jobs, salaries, exams, and emerging sectors.
+            </p>
+          </div>
+          <div>
+            <div class="footer-col-title">Quick Links</div>
+            <ul class="footer-links">
+              <li><a href="#placements">Placements</a></li>
+              <li><a href="#salary">Salary</a></li>
+              <li><a href="#exams">Exams</a></li>
+              <li><a href="#sectors">Sectors</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Resources</div>
+            <ul class="footer-links">
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Employers</div>
+            <ul class="footer-links">
+              <li><a href="#placements">IT Services</a></li>
+              <li><a href="#placements">Big 4</a></li>
+              <li><a href="#sectors">Fintech</a></li>
+              <li><a href="#sectors">Analytics</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Exams</div>
+            <ul class="footer-links">
+              <li><a href="#exams">SSC CGL</a></li>
+              <li><a href="#exams">RBI Grade B</a></li>
+              <li><a href="#exams">SBI PO</a></li>
+              <li><a href="#exams">IBPS PO</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          B.Com (IT) Career Guide &copy; 2026. All data indicative, subject to change.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+      (function () {
+        "use strict";
+        var hamburger = document.getElementById("hamburger");
+        var navLinks = document.getElementById("navLinks");
+
+        if (hamburger && navLinks) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            navLinks.classList.toggle("open");
+            hamburger.classList.toggle("open");
+          });
+
+          // Close nav when a link is clicked
+          navLinks.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              navLinks.classList.remove("open");
+              hamburger.classList.remove("open");
+            }
+          });
+
+          // Close nav when clicking outside
+          document.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768 && !e.target.closest(".top-nav")) {
+              navLinks.classList.remove("open");
+              hamburger.classList.remove("open");
+            }
+          });
+        }
+
+        // Smooth scroll offset compensation for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (e) {
+            var targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            var target = document.querySelector(targetId);
+            if (target) {
+              e.preventDefault();
+              var navHeight = 64;
+              var targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+              window.scrollTo({ top: targetPos, behavior: "smooth" });
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
