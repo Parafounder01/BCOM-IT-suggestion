@@ -841,6 +841,12 @@
         .timeline-title {
           font-size: 20px;
         }
+        .po-grid {
+          grid-template-columns: 1fr;
+        }
+        .sem-subhead {
+          font-size: 20px;
+        }
       }
 
       /* Tablet 640-1024px */
@@ -856,6 +862,9 @@
           grid-template-columns: repeat(2, 1fr);
         }
         .skill-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .po-grid {
           grid-template-columns: repeat(3, 1fr);
         }
         .cert-grid {
@@ -884,6 +893,152 @@
           grid-template-columns: repeat(5, 1fr);
         }
       }
+
+      /* ============================================================
+      CURRICULUM GUIDE — Subject Cards & PO Grid
+      ============================================================ */
+      .curriculum-intro {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.5;
+        margin-bottom: var(--lg);
+        max-width: 800px;
+      }
+      .curriculum-intro strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* Collapsible PO details */
+      .po-toggle {
+        margin-bottom: var(--md);
+        border: 1px solid var(--hairline);
+        padding: var(--xs) var(--sm);
+      }
+      .po-toggle[open] {
+        padding-bottom: var(--sm);
+      }
+      .po-toggle summary {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        cursor: pointer;
+        padding: var(--xxs) 0;
+        user-select: none;
+      }
+      .po-toggle summary::-webkit-details-marker {
+        color: var(--rosso);
+      }
+      .po-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1px;
+        background: var(--hairline);
+        margin-top: var(--xs);
+      }
+      .po-item {
+        background: var(--canvas);
+        padding: var(--xxs) var(--xs);
+        font-size: 13px;
+        color: var(--body);
+        line-height: 1.4;
+      }
+      .po-item strong {
+        color: var(--rosso);
+        font-weight: 600;
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        margin-bottom: 2px;
+      }
+
+      /* PSO cards */
+      .pso-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        margin-bottom: var(--xxs);
+      }
+      .pso-body {
+        font-size: 14px;
+        color: var(--body);
+        line-height: 1.5;
+      }
+
+      /* Subject curriculum cards */
+      .curriculum-card {
+        background: var(--canvas);
+        padding: var(--md);
+        display: flex;
+        flex-direction: column;
+      }
+      .curriculum-card .subject-meta {
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--rosso);
+        margin-bottom: var(--xxxs);
+      }
+      .curriculum-card .subject-name {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--ink);
+        line-height: 1.2;
+        margin-bottom: var(--xs);
+      }
+      .curriculum-card .explain-block {
+        margin-bottom: var(--xs);
+      }
+      .curriculum-card .explain-block:last-of-type {
+        margin-bottom: 0;
+      }
+      .curriculum-card .explain-label {
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        color: var(--muted);
+        margin-bottom: var(--xxxs);
+        display: block;
+      }
+      .curriculum-card .explain-text {
+        font-size: 13px;
+        color: var(--body);
+        line-height: 1.55;
+      }
+      .curriculum-card .explain-text strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .curriculum-card .subject-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--xxxs);
+        margin-top: auto;
+        padding-top: var(--sm);
+      }
+      .curriculum-card .subject-tags .timeline-tag {
+        font-size: 10px;
+        padding: 1px 8px;
+      }
+
+      /* Semester sub-header */
+      .sem-subhead {
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--ink);
+        margin: var(--lg) 0 var(--xs);
+        letter-spacing: -0.36px;
+      }
+      .sem-subhead:first-of-type {
+        margin-top: 0;
+      }
     </style>
   </head>
   <body>
@@ -898,6 +1053,7 @@
           <li><a href="#placements">Placements</a></li>
           <li><a href="#salary">Salary</a></li>
           <li><a href="#exams">Exams</a></li>
+          <li><a href="#curriculum">Curriculum</a></li>
           <li><a href="#sectors">Sectors</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#roadmap">Roadmap</a></li>
@@ -919,6 +1075,622 @@
           <a href="#placements" class="btn btn-primary">Explore Placements</a>
           <a href="#salary" class="btn btn-outline">Salary Breakdown</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== CURRICULUM GUIDE — Simple English Explanations ===== -->
+    <section class="section-dark" id="curriculum">
+      <div class="container">
+        <h2 class="section-title">Curriculum Guide</h2>
+        <p class="section-subtitle">
+          Simple English explanations of what you'll study in Semesters I &amp; II — and why each
+          subject matters for your career.
+        </p>
+
+        <div class="curriculum-intro">
+          Your B.Com (IT) syllabus is not just a list of exams to pass — it's a carefully designed
+          toolkit for your career. Each subject builds specific skills that employers look for. This
+          guide translates every Semester I &amp; II subject into plain English so you understand
+          <strong>exactly what you're learning</strong> and
+          <strong>why it matters</strong>.<br /><br />
+          <em
+            >Based on the syllabus of N.M.S.S.Vellaichamy Nadar College, Department of Commerce with
+            Information Technology, Madurai.</em
+          >
+        </div>
+
+        <!-- Programme Outcomes -->
+        <details class="po-toggle" open>
+          <summary>Programme Outcomes (POs) — 15 Graduate Attributes</summary>
+          <div class="po-grid">
+            <div class="po-item"><strong>PO1</strong> Disciplinary knowledge</div>
+            <div class="po-item"><strong>PO2</strong> Communication Skills</div>
+            <div class="po-item"><strong>PO3</strong> Critical Thinking</div>
+            <div class="po-item"><strong>PO4</strong> Problem Solving</div>
+            <div class="po-item"><strong>PO5</strong> Analytical Reasoning</div>
+            <div class="po-item"><strong>PO6</strong> Research-related skill</div>
+            <div class="po-item"><strong>PO7</strong> Cooperation / Team work</div>
+            <div class="po-item"><strong>PO8</strong> Scientific reasoning</div>
+            <div class="po-item"><strong>PO9</strong> Reflective thinking</div>
+            <div class="po-item"><strong>PO10</strong> Information / Digital Literacy</div>
+            <div class="po-item"><strong>PO11</strong> Self-directed learning</div>
+            <div class="po-item"><strong>PO12</strong> Multicultural competence</div>
+            <div class="po-item"><strong>PO13</strong> Moral &amp; Ethical awareness</div>
+            <div class="po-item"><strong>PO14</strong> Leadership readiness</div>
+            <div class="po-item"><strong>PO15</strong> Life Long Learning</div>
+          </div>
+        </details>
+
+        <!-- Programme Specific Outcomes -->
+        <h3
+          style="
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: var(--xs);
+            letter-spacing: -0.36px;
+          "
+        >
+          Programme Specific Outcomes (PSOs)
+        </h3>
+        <div class="card-grid card-grid-3" style="margin-bottom: var(--lg)">
+          <div class="card card-elevated">
+            <div class="pso-label">PSO1 — Placement</div>
+            <p class="pso-body">
+              Prepare students for organizational roles with value-based and job-oriented courses.
+            </p>
+          </div>
+          <div class="card card-elevated">
+            <div class="pso-label">PSO2 — Contribution to Business World</div>
+            <p class="pso-body">
+              Apply theoretical concepts to produce employable, ethical professionals.
+            </p>
+          </div>
+          <div class="card card-elevated">
+            <div class="pso-label">PSO3 — Contribution to Society</div>
+            <p class="pso-body">
+              Develop commercial knowledge and soft skills for societal challenges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Semester Structure Table -->
+        <h3
+          style="
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: var(--xs);
+            letter-spacing: -0.36px;
+          "
+        >
+          Semester Structure Overview
+        </h3>
+        <div class="table-wrap" style="margin-bottom: var(--lg)">
+          <table class="table-hairline">
+            <thead>
+              <tr>
+                <th>Semester</th>
+                <th>Credits</th>
+                <th>Hours</th>
+                <th>Core Subjects</th>
+                <th>Other Components</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>I</td>
+                <td>23</td>
+                <td>30</td>
+                <td>Financial Accounting I, Principles of Management</td>
+                <td>2 Lang + 1 Elective + SEC + FC + AECC</td>
+              </tr>
+              <tr>
+                <td>II</td>
+                <td>23</td>
+                <td>30</td>
+                <td>Financial Accounting II, Business Law</td>
+                <td>2 Lang + 1 Elective + 2 SEC + AECC</td>
+              </tr>
+              <tr>
+                <td>III — VI</td>
+                <td>—</td>
+                <td>—</td>
+                <td>Advanced Cores (Costing, Taxation, Auditing, IT)</td>
+                <td>Electives, SEC, Internship, Project</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ===== Semester I Subjects ===== -->
+        <h3 class="sem-subhead">Semester I</h3>
+        <div class="card-grid card-grid-3 curriculum-subjects">
+          <!-- 1. Financial Accounting I -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · Core · 4 Credits</div>
+            <div class="subject-name">Financial Accounting I</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                Financial Accounting is the language of business. It teaches you how to record every
+                financial transaction a company makes — from buying supplies to selling products —
+                and summarize it in reports like Profit &amp; Loss statements and Balance Sheets.
+                Think of it as learning to keep a detailed, accurate diary of where money comes from
+                and where it goes.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Every accountant, auditor, business analyst, and finance professional needs this
+                skill. Companies like <strong>TCS, Deloitte, KPMG</strong>, and every bank test
+                accounting fundamentals in their placement exams.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Practice journal entries daily — they are the foundation. Use the rule
+                <strong>"Debit what comes in, Credit what goes out"</strong> as your anchor. Solve
+                at least one complete final accounts problem with adjustments every week.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Journal</span>
+              <span class="timeline-tag">Ledger</span>
+              <span class="timeline-tag">Trial Balance</span>
+              <span class="timeline-tag">Bank Reconciliation</span>
+              <span class="timeline-tag">Depreciation</span>
+              <span class="timeline-tag">Royalty</span>
+            </div>
+          </div>
+
+          <!-- 2. Principles of Management -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · Core · 4 Credits</div>
+            <div class="subject-name">Principles of Management</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This subject explains how organizations work — how managers plan, organize, staff,
+                lead, and control. You study ideas from great management thinkers like
+                <strong>Taylor, Fayol, Drucker, and Mayo</strong>. It's like learning the rules of
+                chess before you play the game.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Management principles are tested in every
+                <strong>MBA entrance, bank PO exam, and company interview</strong>. Understanding
+                how businesses are organized helps you work effectively in any team from day one.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Create a one-page cheat sheet of management theories with the author's name and key
+                idea. Relate each concept to real companies you know — for example, "<strong
+                  >Amazon uses MBO</strong
+                >
+                for delivery targets." Practice writing 3-mark and 5-mark answers.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Planning</span>
+              <span class="timeline-tag">Organizing</span>
+              <span class="timeline-tag">Staffing</span>
+              <span class="timeline-tag">MBO</span>
+              <span class="timeline-tag">Motivation</span>
+              <span class="timeline-tag">Controlling</span>
+            </div>
+          </div>
+
+          <!-- 3. Business Communication -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · Elective · 3 Credits</div>
+            <div class="subject-name">Business Communication</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This course trains you to write professional emails, reports, application letters,
+                and speak confidently in public. It covers everything from drafting a complaint
+                letter to writing a winning resume. Think of it as your transition from
+                <strong>college writing to workplace writing</strong>.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Communication skills are tested in every job interview —
+                <strong>group discussions, email writing tasks, and presentations</strong>. Your
+                resume is the first thing a recruiter sees; this subject teaches you to make it
+                count.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Practice writing <strong>one business letter per day</strong> (enquiry, complaint,
+                job application). Record yourself giving a 2-minute speech and watch it back to
+                improve. Build your actual resume as you learn the format.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Business Letters</span>
+              <span class="timeline-tag">Report Writing</span>
+              <span class="timeline-tag">Resume</span>
+              <span class="timeline-tag">Interview Skills</span>
+              <span class="timeline-tag">Public Speech</span>
+            </div>
+          </div>
+
+          <!-- 4. Business Economics -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · Elective · 3 Credits</div>
+            <div class="subject-name">Business Economics</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                Economics is the study of choices — how people decide what to buy, how companies
+                decide what to produce, and how prices are set. You'll learn about
+                <strong>demand &amp; supply, production costs, and different market types</strong>
+                (monopoly, competition). It explains why a movie ticket costs ₹250 while an iPhone
+                costs ₹80,000.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                <strong>Bank PO exams, MBA entrances, and analytics roles</strong> heavily test
+                economic reasoning. Every business decision is an economic decision — this subject
+                trains you to think like a manager.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Draw <strong>demand-supply graphs</strong> repeatedly — visual memory helps. Relate
+                concepts to everyday examples (e.g., "why does Uber cost more during rain?" = price
+                elasticity). Practice numerical problems on elasticity and production.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Demand &amp; Supply</span>
+              <span class="timeline-tag">Elasticity</span>
+              <span class="timeline-tag">Indifference Curve</span>
+              <span class="timeline-tag">Production Function</span>
+              <span class="timeline-tag">Market Structures</span>
+            </div>
+          </div>
+
+          <!-- 5. Accounting for Business -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · NME · 2 Credits</div>
+            <div class="subject-name">Accounting for Business</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                A foundational crash course in accounting for students who may not have studied
+                commerce before. You learn the essentials — what is debit/credit, how to prepare a
+                cash book, and how to create simple final accounts. It's
+                <strong>Accounting 101 in its simplest form</strong>.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Even if you come from a non-commerce background, this subject ensures you understand
+                business numbers. It's helpful for
+                <strong>banking, sales, and operations roles</strong> where financial literacy is
+                expected.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Focus on the <strong>cash book and trial balance</strong> — they are the most
+                practical tools. Solve each problem step by step rather than skipping ahead. Use
+                colored pens for debit (left) and credit (right) columns.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Accounting Principles</span>
+              <span class="timeline-tag">Journal</span>
+              <span class="timeline-tag">Ledger</span>
+              <span class="timeline-tag">Cash Book</span>
+              <span class="timeline-tag">Final Accounts</span>
+            </div>
+          </div>
+
+          <!-- 6. Office Fundamentals Lab -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem I · FC · 2 Credits</div>
+            <div class="subject-name">Office Fundamentals Lab</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                A hands-on lab where you master
+                <strong>MS-Word, MS-Excel, MS-PowerPoint, and MS-Access</strong>. From creating
+                professional documents and spreadsheets to designing presentations and databases —
+                this is the digital toolkit every office worker needs. It's like learning to drive
+                before you get on the road.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                <strong>Excel proficiency is tested in almost every placement exam.</strong>
+                Advanced Word and PowerPoint skills make you productive from day one at any company.
+                Database basics in Access give you a head start on SQL.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Learn <strong>Excel shortcuts</strong> (Ctrl+Arrow, Alt+= for SUM). Build a
+                mini-project — create a mark sheet with formulas and a chart. Learn
+                <strong>mail merge in Word</strong> — it's a common interview question. Practice
+                database queries in Access.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">MS-Word</span>
+              <span class="timeline-tag">MS-Excel</span>
+              <span class="timeline-tag">MS-PowerPoint</span>
+              <span class="timeline-tag">MS-Access</span>
+              <span class="timeline-tag">Mail Merge</span>
+            </div>
+          </div>
+        </div>
+        <!-- end Semester I grid -->
+
+        <!-- ===== Semester II Subjects ===== -->
+        <h3 class="sem-subhead">Semester II</h3>
+        <div class="card-grid card-grid-3 curriculum-subjects">
+          <!-- 7. Financial Accounting II -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · Core · 4 Credits</div>
+            <div class="subject-name">Financial Accounting II</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                Building on Accounting I, this subject covers advanced topics —
+                <strong
+                  >hire purchases, branch operations, partnership accounts, and international
+                  standards (IFRS)</strong
+                >. You learn how to handle complex business situations like when a partner leaves or
+                when a business dissolves. It's the next level of business fluency.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Partnership accounting is essential for
+                <strong>CA firms and client accounting roles</strong>. IFRS knowledge is highly
+                valued in <strong>Big 4 firms</strong> (Deloitte, EY, KPMG, PwC) and multinational
+                corporations.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Master the <strong>Garner vs Murray rule</strong> for partnership insolvency — it's
+                a classic exam problem. Create comparison charts for different accounting methods.
+                Read one IFRS standard summary each week to build global awareness.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Hire Purchase</span>
+              <span class="timeline-tag">Branch Accounts</span>
+              <span class="timeline-tag">Partnership</span>
+              <span class="timeline-tag">Dissolution</span>
+              <span class="timeline-tag">IFRS</span>
+              <span class="timeline-tag">Ind AS</span>
+            </div>
+          </div>
+
+          <!-- 8. Business Law -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · Core · 4 Credits</div>
+            <div class="subject-name">Business Law</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This subject teaches the legal rules that govern business — how contracts are
+                formed, what makes an agreement legally valid, and your rights when buying or
+                selling goods. It's like learning the
+                <strong>rulebook of the business world</strong>.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Every business deal is a contract.
+                <strong>Bank PO exams, company secretary roles, and legal compliance jobs</strong>
+                heavily test business law. Knowing your legal rights protects you professionally and
+                personally.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Learn the essential elements of a valid contract as a checklist:
+                <strong
+                  >offer, acceptance, consideration, capacity, free consent, lawful object</strong
+                >. Create flashcards for important sections (Section 2(a), 2(h), 10). Read one court
+                case summary per week.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Indian Contract Act</span>
+              <span class="timeline-tag">Offer &amp; Acceptance</span>
+              <span class="timeline-tag">Consideration</span>
+              <span class="timeline-tag">Free Consent</span>
+              <span class="timeline-tag">Sale of Goods Act</span>
+            </div>
+          </div>
+
+          <!-- 9. Introduction to IT -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · Elective · 3 Credits</div>
+            <div class="subject-name">Introduction to Information Technology</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This course demystifies how computers work — from
+                <strong>binary numbers and hardware to networks and the internet</strong>. You learn
+                how data travels across the globe in milliseconds and how different parts of a
+                computer communicate. It's the "how things work" guide to the digital world.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                This is what distinguishes a <strong>B.Com (IT) graduate</strong> from a regular
+                B.Com graduate. IT services companies test basic computer awareness in their online
+                tests. Networking knowledge helps in
+                <strong>IT support, analytics, and fintech roles</strong>.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Learn to <strong>convert binary to decimal</strong> in your head — it's easier than
+                it looks. Draw network topologies (star, bus, ring) — visual diagrams help. Practice
+                one round of computer awareness MCQs daily.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Binary</span>
+              <span class="timeline-tag">Hardware</span>
+              <span class="timeline-tag">Fiber Optics</span>
+              <span class="timeline-tag">LAN / WAN</span>
+              <span class="timeline-tag">Internet Security</span>
+            </div>
+          </div>
+
+          <!-- 10. Informatics and Cyber Laws -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · Elective · 3 Credits</div>
+            <div class="subject-name">Informatics and Cyber Laws</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This subject explores how IT is used in
+                <strong>medicine, business, and artificial intelligence</strong>, and the legal
+                framework governing the digital world — cybercrimes, privacy, and the
+                <strong>IT Act 2000</strong>. It's your guide to staying safe and legal online.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Cyber law is a rapidly growing field. Companies need
+                <strong>compliance professionals</strong> who understand data privacy. IT services
+                and banking roles include cyber awareness sections in their tests.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Follow <strong>one cyber news story each week</strong> (data breaches, new
+                regulations). Learn the key sections of the IT Act 2000 (Sections 43, 66, 67).
+                Understand the difference between
+                <strong>hacking, phishing, and identity theft</strong>.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Informatics</span>
+              <span class="timeline-tag">Cybercrimes</span>
+              <span class="timeline-tag">IT Act 2000</span>
+              <span class="timeline-tag">Data Privacy</span>
+              <span class="timeline-tag">AI &amp; VR</span>
+            </div>
+          </div>
+
+          <!-- 11. Accounting for Decision Making -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · NME · 2 Credits</div>
+            <div class="subject-name">Accounting for Decision Making</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                This subject takes accounting beyond bookkeeping into strategy — how managers use
+                financial data to make decisions about
+                <strong>pricing, production, and budgets</strong>. You'll learn break-even analysis,
+                budgeting, and standard costing. It's accounting as a tool for
+                <strong>thinking, not just recording</strong>.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Directly tested in
+                <strong>MBA interviews, finance internships, and analyst roles</strong>. The ability
+                to read a financial statement and make a recommendation separates a clerk from a
+                manager.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Master the <strong>break-even point formula</strong> (BEP = Fixed Cost ÷
+                Contribution per unit) — it appears in every exam. Practice comparative and
+                common-size balance sheets. Create a budget for your own monthly expenses to
+                understand the concept intuitively.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Management Accounting</span>
+              <span class="timeline-tag">Ratio Analysis</span>
+              <span class="timeline-tag">Marginal Costing</span>
+              <span class="timeline-tag">Standard Costing</span>
+              <span class="timeline-tag">Budgetary Control</span>
+            </div>
+          </div>
+
+          <!-- 12. C Programming Lab -->
+          <div class="curriculum-card">
+            <div class="subject-meta">Sem II · SEC · 2 Credits</div>
+            <div class="subject-name">C Programming Lab</div>
+            <div class="explain-block">
+              <span class="explain-label">What Is This?</span>
+              <p class="explain-text">
+                A hands-on lab where you learn to write C programs — from
+                <strong
+                  >simple interest calculations to sorting numbers and checking palindromes</strong
+                >. You learn how to think like a programmer: break problems down into logical steps
+                and write instructions a computer can follow.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Why It Matters For Your Career</span>
+              <p class="explain-text">
+                Programming fundamentals are tested in
+                <strong>IT company placement exams</strong> (TCS NQT, Infosys BPM). Even if you
+                don't become a developer, understanding code helps you work better with tech teams.
+              </p>
+            </div>
+            <div class="explain-block">
+              <span class="explain-label">Simple Tips To Ace This</span>
+              <p class="explain-text">
+                Practice writing the same program multiple times from memory. Focus on
+                <strong>loops (for, while) and arrays</strong> — they are the backbone of most
+                programs. Use a C compiler app on your phone to practice during commute time.
+              </p>
+            </div>
+            <div class="subject-tags">
+              <span class="timeline-tag">Loops</span>
+              <span class="timeline-tag">Arrays</span>
+              <span class="timeline-tag">Sorting</span>
+              <span class="timeline-tag">Palindrome</span>
+              <span class="timeline-tag">File Handling</span>
+            </div>
+          </div>
+        </div>
+        <!-- end Semester II grid -->
       </div>
     </section>
 
@@ -1503,6 +2275,7 @@
               <li><a href="#placements">Placements</a></li>
               <li><a href="#salary">Salary</a></li>
               <li><a href="#exams">Exams</a></li>
+              <li><a href="#curriculum">Curriculum</a></li>
               <li><a href="#sectors">Sectors</a></li>
             </ul>
           </div>
